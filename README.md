@@ -1,3 +1,13 @@
+![Python](https://img.shields.io/badge/Python-3.10-blue.svg)
+![FastAI](https://img.shields.io/badge/FastAI-2.7.14-green.svg)
+![Model Architecture](https://img.shields.io/badge/Model-ResNet18-darkblue.svg)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.2.2-red.svg)
+![Gradio](https://img.shields.io/badge/Gradio-3.50.2-orange.svg)
+![HuggingFace](https://img.shields.io/badge/Spaces-Deployed-yellow.svg)
+![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
+![Tests](https://img.shields.io/badge/Tests-Pytest%20Passing-brightgreen.svg)
+![GitHub last commit](https://img.shields.io/github/last-commit/nicoacosta04/nature-scene-classifier)
+
 # Nature Scene Classifier
 
 A machine learning project for image classification using FastAI and PyTorch.  
@@ -54,6 +64,30 @@ nature-scene-classifier/
 
 ---
 
+## Architecture Diagram
+
+```mermaid
+flowchart TB
+    A[User Uploads Image]
+    B[CLI classify_image]
+    C[Pytest Tests]
+    D[Input Validation]
+    E[Load FastAI Learner]
+    F[Run learn.predict]
+    G[Format Output]
+    H[Return Prediction]
+
+    A --> D
+    B --> D
+    C --> D
+
+    D --> E
+    E --> F
+    F --> G
+    G --> H
+```
+---
+
 ## Installation
 
 Clone the repository:
@@ -104,6 +138,7 @@ fish: 0.0107
 other: 0.0010
 ```
 
+---
 
 ## Unit testing
 Unit tests are included to validate the behavior of the prediction pipeline.
@@ -133,6 +168,8 @@ The final model was exported using:
 learn.export("nature_scene_classifier_wsl_v2.pkl")
 ```
 
+---
+
 ## Deployment
 The web application is deployed on HuggingFace Spaces / https://huggingface.co/spaces/nacostac04/nature-scene-classifier
 It uses:
@@ -140,6 +177,8 @@ It uses:
 - Gradio blocks for UI rendering
 - A lightweight custom prediction pipeline in core/predict.py
 Users can upload images and receive classification results directly on the space
+
+---
 
 ## Technologies used
 - Python
@@ -150,6 +189,8 @@ Users can upload images and receive classification results directly on the space
 - HuggingFace
 - DuckDuckGo API
 
+---
+
 ## Skills demonstrated
 This project showcases:
 - Machine learning model training and evaluation
@@ -159,6 +200,8 @@ This project showcases:
 - Reproducible workflows
 - CLI and API desing fundamentals
 - Understanding of inference contrainsts and model packing
+
+---
 
 ## Author
 Nicolas Acosta
